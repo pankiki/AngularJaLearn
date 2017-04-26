@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+</head>
+<body>
+ 
+    <div ng-app="app1">
+		<input ng-model="name" type="text" placeholder="请输入姓名">
+		<p>我的姓名： {{name}}</p>
+	</div>
+	<div id="test-0" ng-app="app2">
+
+		<input ng-model="age" type="number" placeholder="请输入年龄">
+		<p>我的年龄: {{age}}</p>
+  	</div>
+  	
+  	<script type="text/javascript">
+  	    //AngularJs默认加载一个ng-app,如果要加载多个app
+  		var app1=angular.module("app1",[]);
+  		var app2=angular.module("app2",[]);
+  		angular.bootstrap(document.getElementById("test-0"),['app2']);
+  	</script>
+  	
+</body>
+
+</html>
